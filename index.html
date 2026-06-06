@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PHANTOM CRIMSON MENU</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- Khung Menu phát sáng màu Đỏ Sẫm Gaming -->
+    <div class="phone-menu-box crimson-glow">
+        
+        <!-- HEADER -->
+        <header class="menu-header">
+            <div class="brand">
+                <i class="fa-solid fa-skull-crossbones logo-icon crimson-text"></i>
+                <div>
+                    <h1 class="crimson-text">HEYPER X IOS</h1>
+                    <span class="subtitle">CRIMSON MOBILE ASSISTANT</span>
+                </div>
+            </div>
+            <div class="status-badge">
+                <span class="status-title">STATUS</span>
+                <span class="status-val">UNDETECTED</span>
+            </div>
+        </header>
+
+        <!-- THANH ĐIỀU HƯỚNG 5 TAB -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="home"><i class="fa-solid fa-house"></i>HOME</button>
+            <button class="tab-btn" data-tab="func"><i class="fa-solid fa-crosshairs"></i>FUNC</button>
+            <button class="tab-btn" data-tab="boost"><i class="fa-solid fa-rocket"></i>BOOST</button>
+            <button class="tab-btn" data-tab="live"><i class="fa-solid fa-chart-line"></i>LIVE</button>
+            <button class="tab-btn" data-tab="settings"><i class="fa-solid fa-gear"></i>CÀI ĐẶT</button>
+        </nav>
+
+        <!-- NỘI DUNG CHI TIẾT CÁC TAB -->
+        <main class="tab-content-wrapper">
+            
+            <!-- TAB 1: HOME -->
+            <section id="home" class="tab-panel active">
+                <div class="panel-section section-glow">
+                    <h3 class="section-title"><i class="fa-solid fa-user-shield"></i> GIỚI THIỆU ADMIN</h3>
+                    <div class="admin-profile">
+                        <div class="avatar-container">
+                            <img src="https://i.ibb.co/pt42P8m/2607-naruto134.jpg" alt="Admin Avatar" class="admin-avatar">
+                        </div>
+                        <p class="admin-desc">☑️ 深度釋放遊戲潛能
+Unlock the Full Potential of Your Gaming Experience
+
+☑️ 精密調校操控手感
+Precision-Tuned Control Experience
+
+☑️ 高效運行，安心使用
+Efficient Performance, Reliable Operation
+
+☑️ 限量發售，匠心之作
+Limited Release, Crafted with Excellence
+ 
+Ⓒ Developer : Tấn Dũng Vctech🍏</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/tandung0907206" target="_blank" class="social-btn fb animation-pulse"><i class="fa-brands fa-facebook"></i> Facebook</a>
+                        <a href="https://zalo.me/g/hh9rx4rmh34mz4xprive" target="_blank" class="social-btn zl animation-pulse"><i class="fa-solid fa-comment-sms"></i> Zalo</a>
+                        <a href="https://www.tiktok.com/@tandungluvyou206?is_from_webapp=1&sender_device=pc" target="_blank" class="social-btn tt animation-pulse"><i class="fa-brands fa-tiktok"></i> Tiktok</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 2: FUNC (12 nút gạt) -->
+            <section id="func" class="tab-panel">
+                <div class="panel-section section-glow">
+                    <h3 class="section-title"><i class="fa-solid fa-toggle-on"></i> CHỨC NĂNG BẬT / TẮT</h3>
+                    <div class="grid-container" id="func-grid"></div>
+                </div>
+            </section>
+
+            <!-- TAB 3: BOOST (12 thanh trượt từ 0) -->
+            <section id="boost" class="tab-panel">
+                <div class="panel-section section-glow">
+                    <h3 class="section-title"><i class="fa-solid fa-sliders"></i> TỐI ƯU ĐỘ NHẠY BOOST</h3>
+                    <div class="grid-container" id="boost-grid"></div>
+                </div>
+            </section>
+
+            <!-- TAB 4: LIVE (Mở game, Biểu đồ RAM, Console) -->
+            <section id="live" class="tab-panel">
+                <div class="panel-section section-glow">
+                    <h3 class="section-title"><i class="fa-solid fa-play"></i> KHỞI CHẠY GAME TRÊN ĐIỆN THOẠI</h3>
+                    <div class="game-redirect">
+                        <button id="btn-ffmax" class="game-btn ffmax-btn animation-pulse"><i class="fa-solid fa-fire-blaster"></i> VÀO FREE FIRE MAX</button>
+                        <button id="btn-ffth" class="game-btn ffth-btn animation-pulse"><i class="fa-solid fa-fire"></i> VÀO FREE FIRE THƯỜNG</button>
+                    </div>
+                </div>
+
+                <div class="panel-section section-glow">
+                    <h3 class="section-title"><i class="fa-solid fa-memory"></i> GIÁM SÁT BỘ NHỚ RAM</h3>
+                    <div class="ram-monitor">
+                        <div class="ram-info">
+                            <span>Sử dụng RAM: <strong id="ram-text" class="crimson-text">45%</strong></span>
+                            <button id="clean-ram-btn" class="action-btn"><i class="fa-solid fa-broom"></i> DỌN RAM</button>
+                        </div>
+                        <div class="ram-bar-bg">
+                            <div class="ram-bar-fill shadow-crimson" id="ram-fill" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="console-log">
+                        <div class="console-header">Hệ thống Console di động</div>
+                        <div class="console-body" id="console-output">[INFO] Hệ thống sẵn sàng...</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TAB 5: CÀI ĐẶT -->
+            <section id="settings" class="tab-panel">
+                <div class="panel-section section-glow">
+                    <h3 class="section-title"><i class="fa-solid fa-gear"></i> CẤU HÌNH MENU</h3>
+                    <div class="setting-item">
+                        <label>Âm lượng hiệu ứng</label>
+                        <input type="range" min="0" max="100" value="80" id="volume-control" class="range-input">
+                    </div>
+                    <div class="setting-item">
+                        <label>Độ phân giải hiển thị</label>
+                        <select class="custom-select">
+                            <option>Tối ưu cho Mobile (Mượt)</option>
+                            <option>Chế độ Crimson Ultra</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
