@@ -678,50 +678,31 @@ document
 
 
 
-// ======================
-// GAME LINK
-// ======================
+  // --- 6. KHỞI CHẠY GAME CHUYỂN HƯỚNG CHUẨN ĐƯỜNG DẪN STORE ---
+    const maxBtn = document.getElementById("btn-ffmax");
+    const thBtn = document.getElementById("btn-ffth");
 
+    if (maxBtn) {
+        maxBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            log("🚀 Đang mở Free Fire MAX...");
+            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                window.location.href = "freefiremax://";
+                setTimeout(() => { window.location.href = "https://apple.com"; }, 1500);
+            } else { window.location.href = "https://google.com"; }
+        });
+    }
 
-
-function openGame(type){
-
-
-
-if(type=="ffmax"){
-
-
-window.open(
-"https://ff.garena.com/",
-"_blank"
-);
-
-
-}
-
-
-
-if(type=="ffth"){
-
-
-window.open(
-"https://ff.garena.com/",
-"_blank"
-);
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
+    if (thBtn) {
+        thBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            log("🚀 Đang mở Free Fire Thường...");
+            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+                window.location.href = "freefire://";
+                setTimeout(() => { window.location.href = "https://apple.com"; }, 1500);
+            } else { window.location.href = "https://google.com"; }
+        });
+    }
 
 
 // ======================
