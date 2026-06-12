@@ -679,15 +679,13 @@ document
 
 
   // --- 6. KHỞI CHẠY GAME CHUYỂN HƯỚNG CHUẨN ĐƯỜNG DẪN STORE ---
-   function openGame(type){
+function openGame(type){
 
 
 let appUrl = "";
 let storeUrl = "";
 
 
-
-// Free Fire MAX iOS
 
 if(type=="ffmax"){
 
@@ -704,10 +702,6 @@ storeUrl =
 
 
 
-
-
-// Free Fire thường iOS
-
 if(type=="ffth"){
 
 
@@ -723,22 +717,51 @@ storeUrl =
 
 
 
+// đánh dấu thời gian
 
-// thử mở app
+let start =
+Date.now();
+
+
+
+// mở game
 
 window.location.href = appUrl;
 
 
 
-// nếu chưa cài app -> App Store
-
-setTimeout(()=>{
 
 
-window.location.href = storeUrl;
+// kiểm tra nếu không mở được app
+
+let check = setInterval(()=>{
 
 
-},1800);
+if(Date.now()-start > 2500){
+
+
+clearInterval(check);
+
+
+
+if(
+document.visibilityState=="visible"
+){
+
+window.location.href =
+storeUrl;
+
+
+}
+
+
+
+}
+
+
+
+},500);
+
 
 
 
