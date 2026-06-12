@@ -679,31 +679,70 @@ document
 
 
   // --- 6. KHỞI CHẠY GAME CHUYỂN HƯỚNG CHUẨN ĐƯỜNG DẪN STORE ---
-    const maxBtn = document.getElementById("btn-ffmax");
-    const thBtn = document.getElementById("btn-ffth");
+   function openGame(type){
 
-    if (maxBtn) {
-        maxBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            log("🚀 Đang mở Free Fire MAX...");
-            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-                window.location.href = "freefiremax://";
-                setTimeout(() => { window.location.href = "https://apple.com"; }, 1500);
-            } else { window.location.href = "https://google.com"; }
-        });
-    }
 
-    if (thBtn) {
-        thBtn.addEventListener("click", (e) => {
-            e.preventDefault();
-            log("🚀 Đang mở Free Fire Thường...");
-            if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-                window.location.href = "freefire://";
-                setTimeout(() => { window.location.href = "https://apple.com"; }, 1500);
-            } else { window.location.href = "https://google.com"; }
-        });
-    }
+let appUrl = "";
+let storeUrl = "";
 
+
+
+// Free Fire MAX iOS
+
+if(type=="ffmax"){
+
+
+appUrl =
+"freefiremax://";
+
+
+storeUrl =
+"https://apps.apple.com/app/free-fire-max/id1480516829";
+
+
+}
+
+
+
+
+
+// Free Fire thường iOS
+
+if(type=="ffth"){
+
+
+appUrl =
+"freefire://";
+
+
+storeUrl =
+"https://apps.apple.com/app/garena-free-fire/id1300146617";
+
+
+}
+
+
+
+
+// thử mở app
+
+window.location.href = appUrl;
+
+
+
+// nếu chưa cài app -> App Store
+
+setTimeout(()=>{
+
+
+window.location.href = storeUrl;
+
+
+},1800);
+
+
+
+}
 
 // ======================
 // SETTING
